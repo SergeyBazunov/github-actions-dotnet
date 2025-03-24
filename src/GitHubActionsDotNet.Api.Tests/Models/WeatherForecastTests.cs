@@ -12,7 +12,11 @@ public class WeatherForecastTests
             TemperatureC = 0
         };
 
+<<<<<<< HEAD
         weatherForecast.TemperatureF.Should().Be(32);
         weatherForecast.TemperatureF.Should().Be(32);
+=======
+        weatherForecast.TemperatureF.Should().Be(31);
+>>>>>>> 10806d7 (test fails)
     }
 }
