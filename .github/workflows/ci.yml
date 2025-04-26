@@ -1,12 +1,12 @@
-name: PR Verify
+name: CI
 
 on:
-  pull_request:
+  push:
     branches: [ "main" ]
 
 jobs:
   build:
-    name: PR Verify
+    name: CI
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Backend Test
         run: dotnet test --configuration Release --no-build --verbosity normal
-
-      - name: Dotnet Format
-        run: dotnet format --verbosity detailed --verify-no-changes
+      
+      - name: Dotnet Publish
+        run: dotnet publish src\GitHubActionsDotNet.Api\GitHubActionsDotNet.Api.csproj --configuration Release -o artifacts
 
