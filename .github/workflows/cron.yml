@@ -2,11 +2,11 @@ name: Run every day at 00:00 UTC
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every day at 00:00 UTC
+    - cron: '0 4 * * *'
 
 jobs:
   cron:
-    name: Run every 5 min
+    name: Run every day
     runs-on: ubuntu-latest
 
     steps:
