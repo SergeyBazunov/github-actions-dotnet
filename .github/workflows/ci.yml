@@ -30,5 +30,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dt-artifact
-          path: artifacts/
+          path: ./artifacts/
+          if-no-files-found: error
 
